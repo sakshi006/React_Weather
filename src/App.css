@@ -1,38 +1,111 @@
-.App {
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "montseratt", sans-serif;
+}
+
+.app {
+  background-image: url("./bailey-zindel-NRQV-hBF10M-unsplash.jpg");
+  background-size: cover;
+  background-position: bottom;
+  transition: 0.5s ease-out;
+}
+
+.app.warm {
+  background-image: url(./aaron-burden-2IjiGDZw-q0-unsplash.jpg);
+}
+main {
+  min-height: 100vh;
+  background-image: linear-gradient(
+    to bottom,
+    rgba(202, 184, 184, 0.1),
+    rgba(0, 0, 0, 0.75)
+  );
+  padding: 1.5rem;
+}
+
+.search-box {
+  width: 100%;
+  margin: 0 0 4rem;
+}
+
+.search-box .search-bar {
+  display: block;
+  width: 100%;
+  padding: 1.5rem;
+
+  appearance: none;
+  background: none;
+  border: none;
+  outline: none;
+
+  background-color: rgb(224, 234, 241);
+  border-radius: 0rem 0rem 0.5rem 0.5rem;
+  margin: -1rem;
+  box-shadow: 0px 5px rgba(0, 0, 0, 0.2);
+
+  color: black;
+  font-size: large;
+  transition: 0.4s ease;
+}
+
+.search-box .search-bar:hover,
+.search-bar:focus {
+  background-color: aliceblue;
+}
+
+.location-box .location {
+  color: white;
+  font-size: xx-large;
+  font-weight: bold;
+  text-align: center;
+  text-shadow: 3px 3px rgba(50, 50, 70, 0.5);
+}
+
+.location-box .date {
+  color: white;
+  font-size: large;
+  font-weight: bold;
+  font-style: italic;
+  text-align: center;
+  text-shadow: 3px 3px rgba(50, 50, 70, 0.5);
+}
+.weather-box {
   text-align: center;
 }
+.weather-box .temp {
+  position: relative;
+  display: inline-block;
+  margin: 2rem auto;
+  background-color: rgba(225, 225, 225, 0.2);
+  border-radius: 16px;
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
+  padding: 0.5rem 2rem;
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
   color: white;
+  font-size: 6rem;
+  font-weight: 800;
+
+  text-shadow: 3px 6px rgba(50, 50, 70, 0.5);
+  text-align: center;
+  box-shadow: 3px 6px rgba(0, 0, 0, 0.2);
 }
 
-.App-link {
-  color: #61dafb;
+.weather-box .weather {
+  color: white;
+  font-size: 2.5rem;
+  font-weight: 600;
+  text-shadow: 3px 3px rgba(50, 50, 70, 0.5);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.error {
+  color: white;
+  font-size: xx-large;
+  font-weight: bold;
+  text-align: center;
+  text-shadow: 3px 3px rgba(50, 50, 70, 0.5);
 }
